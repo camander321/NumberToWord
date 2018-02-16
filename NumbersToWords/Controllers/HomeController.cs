@@ -6,10 +6,16 @@ namespace NumbersToWords.Controllers
   public class HomeController : Controller
   {
 
-    [Route("/")]
-    public ActionResult Form()
+    [HttpGet("/")]
+    public ActionResult Index()
     {
-      return View("Index", "This is a message from the controller");
+      return View("Index");
+    }
+
+    [HttpPost("/")]
+    public ActionResult Result()
+    {
+      return View("Result", NumberToWord.Convert(Request.Form["number"]));
     }
   }
 }
