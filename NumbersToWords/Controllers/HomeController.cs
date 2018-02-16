@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NumbersToWords.Models;
+using System.Collections.Generic;
 
 namespace NumbersToWords.Controllers
 {
@@ -15,7 +16,10 @@ namespace NumbersToWords.Controllers
     [HttpPost("/")]
     public ActionResult Result()
     {
-      return View("Result", NumberToWord.Convert(Request.Form["number"]));
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("num", Request.Form["number"]);
+      model.Add("str", NumberToWord.Convert(Request.Form["number"]));
+      return View("Result", model);
     }
   }
 }

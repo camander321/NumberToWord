@@ -25,7 +25,7 @@ namespace NumbersToWords.Models
 
     private static List<string> higherPlaceValues = new List<string>
     {
-      "", "thousand", "million", "billion", "trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion	", "Octillion", "Nonillion", "Decillion", "Undecillion", "Duodecillion", "Tredecillion"
+      "", "thousand", "million", "billion", "trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion	", "Octillion", "Nonillion", "Decillion", "Undecillion", "Duodecillion", "Tredecillion", "Quattuordecillion", "Quindecillion", "Sexdecillion", "Septendecillion", "Octodecillion", "Novemdecillion", "Vigintillion"
     };
 
     public static char GetDigitFromRight(int digit, string number)
